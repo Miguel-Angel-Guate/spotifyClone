@@ -11,8 +11,7 @@ export class HomeComponent {
   THETOP: any[] = [];
   constructor(private spotify: SpofityService) {
     this.spotify.getNewReleases().subscribe((response: any) => {
-      console.log('successfully', response.albums.items);
-      this.THETOP = response.albums.items;
+      this.THETOP = response;
     });
     // this.http
     //   .get('https://restcountries.eu/rest/v2/lang/en')

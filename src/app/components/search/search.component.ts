@@ -8,12 +8,11 @@ import { SpofityService } from 'src/app/services/spofity.service';
 })
 export class SearchComponent {
   constructor(private spotify: SpofityService) {}
-  artistss: any[] = [];
-  searching(findanything: string) {
-    console.log(findanything);
-    this.spotify.getArtist(findanything).subscribe((answer: any) => {
-      console.log('the answer', answer.artists.items);
-      this.artistss = answer.artists.items;
+  searchArtists: any[] = [];
+  searching(findAnything: string) {
+    console.log(findAnything);
+    this.spotify.getArtist(findAnything).subscribe((searchResultData: any) => {
+      this.searchArtists = searchResultData;
     });
   }
 }

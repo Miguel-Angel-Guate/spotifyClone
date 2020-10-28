@@ -5,10 +5,10 @@
 </div>
 
 <div class="card-columns m-5">
-    <div *ngFor='let artistName of artistss' class="card">
-        <img [src]="artistName.images[0].url" class="card-img-top" alt="...">
+    <div *ngFor='let searchArtist of searchArtists' class="card">
+        <img [src]="searchArtist.images[0].url" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">{{artistName.name}}</h5>
+            <h5 class="card-title">{{searchArtist.name}}</h5>
             <!-- <p class="card-text">
                 <span *ngFor='let artist of item.artists' class="badge badge-pill badge-success">{{artist.name}}</span>
             </p> -->
