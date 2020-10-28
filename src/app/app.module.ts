@@ -10,6 +10,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
+//services
+import { SpofityService } from './services/spofity.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(ROUTES), HttpClientModule],
-  providers: [],
+  providers: [SpofityService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

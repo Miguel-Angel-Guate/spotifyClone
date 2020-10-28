@@ -1,1 +1,18 @@
-<p>home works!</p>
+<!-- <h1>list of Countries <small>english speakers</small></h1>
+<div class="content">
+    <ol>
+        <li *ngFor='let country of countries'>
+            {{country.name}} - {{country.population |number}}
+        </li>
+    </ol>
+
+</div> -->
+<div class="card-columns">
+    <div *ngFor='let item of THETOP' class="card">
+        <img [src]="item.images[0].url" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text">
+                <span *ngFor='let artist of item.artists' class="badge badge-pill badge-success">{{artist.name}}</span>
+            </p>
+        </div>
