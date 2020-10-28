@@ -1,1 +1,15 @@
-<p>search works!</p>
+<div class="roe">
+    <div class="col">
+        <input #findAnything type="text" (keyup)="searching(findAnything.value)" class="form-control" placeholder="search">
+    </div>
+</div>
+
+<div class="card-columns m-5">
+    <div *ngFor='let artistName of artistss' class="card">
+        <img [src]="artistName.images[0].url" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{artistName.name}}</h5>
+            <!-- <p class="card-text">
+                <span *ngFor='let artist of item.artists' class="badge badge-pill badge-success">{{artist.name}}</span>
+            </p> -->
+        </div>
