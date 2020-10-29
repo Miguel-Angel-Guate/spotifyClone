@@ -10,16 +10,10 @@ import { SpofityService } from 'src/app/services/spofity.service';
 export class HomeComponent {
   // countries: any[] = [];
 
-  THETOP: any[] = [];
+  NEWRELEASE: any[] = [];
   constructor(private spotify: SpofityService, private router: Router) {
     this.spotify.getNewReleases().subscribe((response: any) => {
-      this.THETOP = response;
+      this.NEWRELEASE = response;
     });
-    // this.http
-    //   .get('https://restcountries.eu/rest/v2/lang/en')
-    //   .subscribe((response: any) => {
-    //     console.log(response);
-    //     this.countries = response;
-    //   });
   }
 }

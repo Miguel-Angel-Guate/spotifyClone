@@ -17,6 +17,7 @@ import { SpofityService } from './services/spofity.service';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { LoadingComponent } from './components/loading/loading.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { CardsComponent } from './components/cards/cards.component';
     NoimagePipe,
     LoadingComponent,
     CardsComponent,
+    DomseguroPipe,
   ],
   imports: [BrowserModule, RouterModule.forRoot(ROUTES), HttpClientModule],
   providers: [SpofityService],
