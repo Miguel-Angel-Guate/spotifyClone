@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { SpofityService } from 'src/app/services/spofity.service';
 
 @Component({
@@ -8,8 +9,9 @@ import { SpofityService } from 'src/app/services/spofity.service';
 })
 export class HomeComponent {
   // countries: any[] = [];
+
   THETOP: any[] = [];
-  constructor(private spotify: SpofityService) {
+  constructor(private spotify: SpofityService, private router: Router) {
     this.spotify.getNewReleases().subscribe((response: any) => {
       this.THETOP = response;
     });
@@ -21,5 +23,14 @@ export class HomeComponent {
     //   });
   }
 
-  ngOnInit(): void {}
+  viewArtist(item: any) {
+    console.log(item);
+    let artistId;
+    if (item.type === 'artist') {
+      artistId = item.id;
+    } else {
+      artistId = item.artists[0].id;
+    }
+    this.router.navigate(['/artist', artistId]);
+  }
 }

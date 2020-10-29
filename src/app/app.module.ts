@@ -6,12 +6,17 @@ import { ArtistComponent } from './components/artist/artist.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+
 //routs
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
 //services
 import { SpofityService } from './services/spofity.service';
+//pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { LoadingComponent } from './components/loading/loading.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +25,9 @@ import { SpofityService } from './services/spofity.service';
     HomeComponent,
     SearchComponent,
     NavbarComponent,
+    NoimagePipe,
+    LoadingComponent,
+    CardsComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(ROUTES), HttpClientModule],
   providers: [SpofityService],

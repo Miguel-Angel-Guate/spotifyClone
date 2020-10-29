@@ -11,7 +11,7 @@ export class SearchComponent {
   searchArtists: any[] = [];
   searching(findAnything: string) {
     console.log(findAnything);
-    this.spotify.getArtist(findAnything).subscribe((searchResultData: any) => {
+    this.spotify.getArtists(findAnything).subscribe((searchResultData: any) => {
       this.searchArtists = searchResultData;
     });
   }

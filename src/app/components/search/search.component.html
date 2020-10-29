@@ -1,12 +1,12 @@
-<div class="roe">
+<div class="row">
     <div class="col">
         <input #findAnything type="text" (keyup)="searching(findAnything.value)" class="form-control" placeholder="search">
     </div>
 </div>
 
 <div class="card-columns m-5">
-    <div *ngFor='let searchArtist of searchArtists' class="card">
-        <img [src]="searchArtist.images[0].url" class="card-img-top" alt="...">
+    <div *ngFor='let searchArtist of searchArtists' class="card puntero">
+        <img [src]="searchArtist.images | noimage " class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{searchArtist.name}}</h5>
             <!-- <p class="card-text">
