@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { SpofityService } from 'src/app/services/spofity.service';
 @Component({
   selector: 'app-artist',

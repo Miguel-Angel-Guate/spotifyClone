@@ -22,15 +22,4 @@ export class HomeComponent {
     //     this.countries = response;
     //   });
   }
-
-  viewArtist(item: any) {
-    console.log(item);
-    let artistId;
-    if (item.type === 'artist') {
-      artistId = item.id;
-    } else {
-      artistId = item.artists[0].id;
-    }
-    this.router.navigate(['/artist', artistId]);
-  }
 }

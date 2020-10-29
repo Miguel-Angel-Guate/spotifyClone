@@ -4,12 +4,4 @@
     </div>
 </div>
 
-<div class="card-columns m-5">
-    <div *ngFor='let searchArtist of searchArtists' class="card puntero">
-        <img [src]="searchArtist.images | noimage " class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">{{searchArtist.name}}</h5>
-            <!-- <p class="card-text">
-                <span *ngFor='let artist of item.artists' class="badge badge-pill badge-success">{{artist.name}}</span>
-            </p> -->
-        </div>
+<app-cards [items]="searchArtists"></app-cards>

@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
-  styleUrls: ['./cards.component.css']
+  styleUrls: ['./cards.component.css'],
 })
-export class CardsComponent implements OnInit {
+export class CardsComponent {
+  @Input() items: any[] = [];
 
-  constructor() { }
+  constructor(private router: Router) {}
+  viewArtist(item: any) {
+    let artistId;
+    if (item.type === 'artist') {
+      artistId = item.id;
+    } else {
+      artistId = item.artists[0].id;
+    }
 
-  ngOnInit(): void {
+    this.router.navigate(['/artist', artistId]);
   }
-
 }
